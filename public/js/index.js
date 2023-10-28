@@ -25,6 +25,7 @@
             p.innerText = `${msg.username}: ${msg.text}`;
             logMessages.appendChild(p);
         });
+        logMessages.scrollTop = logMessages.scrollHeight;
     }
 
     socket.on('notification', ({messages}) => {
